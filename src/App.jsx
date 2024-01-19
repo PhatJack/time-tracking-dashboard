@@ -14,7 +14,7 @@ function App() {
 	const [data, setData] = useState([])
 
 	const getData = async () => {
-		await fetch('http://localhost:5173/data.json')
+		await fetch('/data.json')
 			.then((res) => res.json())
 			.then(data => {
 				setData(data)

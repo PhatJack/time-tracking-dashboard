@@ -14,7 +14,7 @@ function App() {
 	const [data, setData] = useState([])
 
 	const getData = async () => {
-		await fetch('../data.json')
+		await fetch('http://localhost:5173/data.json')
 			.then((res) => res.json())
 			.then(data => {
 				setData(data)
@@ -25,7 +25,7 @@ function App() {
 	}, [])
 	return (
 		<>
-			<div className="w-full h-full md:h-screen flex justify-center items-center bg-very-dark-blue md:py-0 py-5">
+			<div className="w-full h-full md:h-screen flex justify-center items-center bg-very-dark-blue md:p-0 p-5">
 				<div className="max-w-[1143px] w-full min-h-[520px] md:h-fit grid justify-center grid-cols-1 grid-rows-[auto] md:grid-cols-custom-desktop md:grid-rows-custom-desktop gap-[1.875rem]">
 					<div className="bg-dark-blue md:cols-[1_/_2] md:row-[1_/_-1] rounded-[1.15rem] relative">
 						<div className="bg-blue  md:h-[350px] w-full flex  md:flex-col gap-10 p-8 rounded-[1.15rem]">
